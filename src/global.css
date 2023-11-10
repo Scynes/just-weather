@@ -1,0 +1,163 @@
+/* ------------- *
+ *   CSS Reset   *
+ * ------------- */
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Sora';
+}
+
+html, body {
+    height: 100%;
+}
+
+/* ---------- *
+ *   GLOBAL   *
+ * ---------- */
+:root {
+    /* background colors */
+
+    /* other colors */
+    --white-col: white;
+    --light-gray-blue: rgb(240, 240, 255);
+    --light-gray-blue-sat: rgb(228, 228, 251);
+}
+
+/* ----------- *
+ *   UTILITY   *
+ * ----------- */
+.height-full {
+    height: 100%;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.borderless {
+    border: none !important;
+}
+
+.outlineless {
+    outline: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* -------- *
+ *   FLEX   *
+ * -------- */
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.flex.align-space-between {
+    align-items: space-between;
+}
+
+/* -------- *
+ *   GRID   *
+ * -------- */
+.grid {
+    display: grid;
+}
+
+/* --------------- *
+ *   FLEX / GRID   *
+ * --------------- */
+.align-center:is(.flex, .grid) {
+    align-items: center;
+}
+
+.justify-center:is(.flex, .grid) {
+    justify-content: center;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-5 {
+    gap: 5rem;
+}
+
+/* --------------- *
+ *   APPLICATION   *
+ * --------------- */
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav h1 {
+    font-size: clamp(1.25rem, 2.5rem, 4vw);
+}
+
+.logo-container {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    padding: 0.5rem;
+    background-color: royalblue;
+    border-radius: 0.75rem;
+}
+
+.page-container {
+    padding: 3rem;
+    max-width: 120rem;
+    width: 100%;
+}
+
+.search-bar {
+    padding: 1.5rem;
+}
+
+.search-bar, .search-suggestions {
+    border: none;
+    border-radius: 0.75rem;
+    background-color: var(--light-gray-blue);
+}
+
+.search-suggestions {
+    margin-top: 1rem;
+    box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-suggestions ul {
+    padding: 0;
+    list-style: none;
+    font-size: 1.25rem;
+}
+
+.search-suggestions li {
+    padding: 1.5rem;
+}
+
+.search-suggestions li:hover {
+    cursor: pointer;
+    border-radius: 0.75rem;
+    background-color: var(--light-gray-blue-sat);
+}

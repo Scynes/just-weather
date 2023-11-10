@@ -30,7 +30,7 @@ export default <T>(endpoint: string) => {
             });
 
         return () => controller.abort();
-    }, []);
+    }, [ endpoint ]);
 
     return { collection, error, isLoading };
 }

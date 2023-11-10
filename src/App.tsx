@@ -1,7 +1,12 @@
+import NavigationBar from '@components/NavigationBar';
+
 export default () => {
+
     return (
         <>
-            <h1>Hello</h1>
+            <div className='page-container'>
+                <NavigationBar />
+            </div>
         </>
     );
 }
